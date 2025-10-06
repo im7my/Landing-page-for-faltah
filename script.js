@@ -1,98 +1,115 @@
-// Simple bilingual (AR/EN) toggle + smooth scroll with privacy-first approach
 const dict = {
   ar: {
     brand: "فلته",
     nav_about: "عن فلته",
     nav_features: "المزايا",
     nav_join: "سجّل اهتمامك",
-    hero_h1: "التوصيل بين المدن—بأسلوب أذكى",
-    hero_p: "فلته تربط المرسِل بالمسافر مباشرة لتوصيل الطلبات بسرعة وبتكلفة أقل، مع تجربة فاخرة مستوحاة من iOS واهتمام كامل بالخصوصية.",
-    hero_cta: "انضم للقائمة",
+    nav_contact: "للتواصل والشراكات",
+    hero_h1: "التوصيل بين المدن — بأسلوب أذكى",
+    hero_p: "فلته تربط المرسِل بالمسافر مباشرة لتوصيل الطلبات بسرعة وبتكلفة أقل على الرحلات التي ستتم على أي حال مع تحقيق دخل للمواطن.",
+    hero_cta: "سجّل اهتمامك",
     hero_secondary: "شاهد المزايا",
-    badge_ar_en: "واجهة عربية/إنجليزية",
-    badge_privacy: "خصوصية أولًا (بدون تتبع)",
-    badge_sa: "موجّه للسوق السعودي",
     kpi_title: "لمحة عن تجربة المستخدم",
-    kpi1: "تسعير ديناميكي",
-    kpi1s: "حسب الوزن/المسافة",
-    kpi2: "لغة عربية/إنجليزية",
-    kpi2s: "RTL/LTR",
-    kpi3: "وسائل دفع محلية",
-    kpi3s: "Apple Pay لاحقًا",
-    kpi_disc: "* تفاصيل المُنتج قيد التطوير — الأرقام الحساسة تُشارك لاحقًا عند الطلب.",
+    kpi1: "أضف رحلاتك",
+    kpi2: "الرحلات القائمة",
+    kpi3: "أرسل شُحنة",
+    kpi4: "الشحنات المتوفّرة",
+    kpi5: "تسعير ديناميكي",
+    kpi6: "الشحن المتعدد",
+    kpi_disc: "* هذا عرض مبسّط — تفاصيل أكثر عند الإطلاق.",
     about_h2: "عن فلته (Faltah)",
-    about_p: "فلته تطبيق توصيل سعودي يربط المسافرين بالمرسلين لتسليم الشحنات بين المدن. نبدأ بالمنطقة الوسطى مع معايير أمان وجودة عالية، ونموذج تسعير واضح وعادل.",
+    about_p: "فلته منصة توصيل تربط المسافرين بالمرسلين لتسليم الشحنات بين المدن، بمعايير أمان وجودة عالية ونموذج تسعير واضح وعادل.",
     about_card1_h3: "لماذا الآن؟",
-    about_card1_p: "الطلب على حلول توصيل مرنة وسريعة في ازدياد. فلته يقلل التكلفة بربط الطلبات برحلات قائمة فعلاً.",
-    about_card2_h3: "نهج الخصوصية",
-    about_card2_p: "لا نستخدم أي تعقب طرف ثالث. لا Google Analytics. لا Pixel. جمع الحد الأدنى من البيانات عبر نموذج Tally.",
-    about_card3_h3: "للمستثمرين",
-    about_card3_p: "نسخة مختصرة من الرؤية والمزايا هنا فقط. التفاصيل المالية الحساسة متاحة مؤقتًا عند الطلب وبمذكرة عدم إفشاء.",
-    features_h2: "مزايا أساسية",
-    f1_h: "تسعير ذكي",
-    f1_p: "أساس + مسافة + وزن مع تحفيز التجميع للتجار.",
-    f2_h: "تجربة Apple‑style",
-    f2_p: "واجهة داكنة أنيقة، أزرق × أبيض، زجاجية ناعمة.",
-    f3_h: "ثنائي اللغة",
-    f3_p: "عربي/إنجليزي مع دعم RTL/LTR كامل.",
-    f4_h: "جاهزية الدفع المحلي",
-    f4_p: "تكامل Apple Pay ومزودي دفع محليين لاحقًا.",
+    about_card1_p: "الطلب على حلول توصيل مرنة وسريعة في ازدياد. فلته يقلل التكلفة بربط الشحنات برحلات قائمة أصلاً.",
+    about_card2_h3: "قيمة حقيقية",
+    about_card2_p: "وقت أقصر وتكلفة أقل للمرسل، ودخل إضافي للمسافر، وحلول تجميع فعّالة للمتاجر.",
+    about_card3_h3: "جاهزية للنمو",
+    about_card3_p: "بنية قابلة للتوسع ودعم ثنائي اللغة وتجربة مهيأة للأجهزة المحمولة.",
+    features_h2: "المزايا الأساسية",
+    tag_sender: "للـمرسِل",
+    tag_traveler: "للمسافر",
+    tag_merchant: "للمتاجر",
+    f1_h: "تسعير شفاف وديناميكي",
+    f1_p: "حساب تلقائي حسب المسافة والوزن مع وضوح كامل للتكلفة.",
+    f2_h: "مطابقة سريعة",
+    f2_p: "ربط الشحنة بأقرب رحلة مناسبة لتقليل زمن الانتظار.",
+    f3_h: "دخل إضافي من رحلاتك",
+    f3_p: "حوّل رحلاتك المعتادة إلى مصدر دخل بسيط وآمن.",
+    f4_h: "رحلات ولوحة واضحة",
+    f4_p: "واجهة منظمة لعرض الرحلات القائمة والشحنات المتاحة.",
+    f5_h: "التجميع الذكي (3+)",
+    f5_p: "تحفيز لتجميع الشحنات لخفض التكلفة وتحسين الكفاءة.",
+    f6_h: "شحن متعدد بواجهة واحدة",
+    f6_p: "إدارة طلبات متعددة في دفعة واحدة بسهولة.",
     form_h2: "سجّل اهتمامك",
-    form_p: "عبّئ النموذج أدناه ليصلك تحديث الإطلاق.",
-    privacy_note: "نحترم خصوصيتك — لا نبيع بياناتك. تُستخدم معلوماتك للتواصل حول الإطلاق فقط.",
+    form_p: "اضغط الزر لفتح النموذج بملء الشاشة. سهل على الجوال ولا يتداخل مع التصفح.",
+    form_btn: "فتح النموذج",
+    privacy_note: "نحترم خصوصيتك — تُستخدم معلوماتك للتواصل حول الإطلاق فقط.",
     contact_h2: "للتواصل والشراكات",
-    contact_p: "للمستثمرين والشركاء: راسلنا لطلب نسخة مختصرة تحت NDA. سيتم توفير تفاصيل إضافية لاحقًا.",
-    contact_cta: "انضم للقائمة",
+    contact_p: "للمستثمرين والشركاء يسعدنا استكشاف سُبل التعاون بيننا بما يحقق قيمة مشتركة.",
+    contact_invest: "للمستثمرين",
+    contact_partners: "للشراكات",
+    contact_hello: "للإستفسارات العامة",
     foot_copy: "© 2025 فلته — جميع الحقوق محفوظة.",
-    foot_priv: "سياسة الخصوصية (مختصرة)",
-    foot_terms: "الشروط (مختصرة)"
+    foot_priv: "سياسة الخصوصية",
+    foot_terms: "الشروط",
+    modal_title: "سجّل اهتمامك"
   },
   en: {
     brand: "Faltah",
     nav_about: "About",
     nav_features: "Features",
     nav_join: "Join Waitlist",
+    nav_contact: "Partnerships",
     hero_h1: "Intercity delivery — made smarter",
-    hero_p: "Faltah connects senders with travelers to deliver items faster and at lower cost, with an iOS‑inspired, privacy‑first experience.",
-    hero_cta: "Join the list",
+    hero_p: "Faltah connects senders with travelers to deliver items faster and at lower cost on trips that are happening anyway — creating income for citizens.",
+    hero_cta: "Join waitlist",
     hero_secondary: "See features",
-    badge_ar_en: "Arabic/English UI",
-    badge_privacy: "Privacy‑first (no tracking)",
-    badge_sa: "Built for Saudi market",
     kpi_title: "Experience Highlights",
-    kpi1: "Dynamic pricing",
-    kpi1s: "by distance/weight",
-    kpi2: "Arabic/English",
-    kpi2s: "RTL/LTR",
-    kpi3: "Local payments",
-    kpi3s: "Apple Pay later",
-    kpi_disc: "* Details in progress — sensitive figures shared on request.",
+    kpi1: "Add your trips",
+    kpi2: "Available trips",
+    kpi3: "Send a parcel",
+    kpi4: "Available shipments",
+    kpi5: "Dynamic pricing",
+    kpi6: "Multi-shipment",
+    kpi_disc: "* Simplified preview — more details at launch.",
     about_h2: "About Faltah",
-    about_p: "A Saudi delivery app that connects travelers with senders for intercity shipments. We start in Central KSA with strong safety and clear pricing.",
+    about_p: "Faltah connects travelers and senders for intercity deliveries with strong safety standards and clear, fair pricing.",
     about_card1_h3: "Why now?",
-    about_card1_p: "Demand for flexible, fast delivery is rising. Faltah reduces cost by matching existing trips.",
-    about_card2_h3: "Privacy stance",
-    about_card2_p: "We don't use third‑party tracking. No Google Analytics. Minimal data via Tally form.",
-    about_card3_h3: "For investors",
-    about_card3_p: "Only a short public overview here. Financial details on request under NDA.",
+    about_card1_p: "Demand for flexible and fast delivery is rising. Faltah reduces cost by matching shipments to existing trips.",
+    about_card2_h3: "Real value",
+    about_card2_p: "Shorter time & lower cost for senders, extra income for travelers, and efficient bundling for merchants.",
+    about_card3_h3: "Ready to scale",
+    about_card3_p: "Scalable build, bilingual support, and mobile-first UX.",
     features_h2: "Key features",
-    f1_h: "Smart pricing",
-    f1_p: "Base + distance + weight; merchant bundling incentives.",
-    f2_h: "Apple‑style UX",
-    f2_p: "Elegant dark UI, blue × white, soft glassmorphism.",
-    f3_h: "Bilingual",
-    f3_p: "Arabic/English with full RTL/LTR support.",
-    f4_h: "Local payments ready",
-    f4_p: "Apple Pay and local PSPs later.",
+    tag_sender: "Sender",
+    tag_traveler: "Traveler",
+    tag_merchant: "Merchants",
+    f1_h: "Transparent dynamic pricing",
+    f1_p: "Automatic pricing by distance & weight with full clarity.",
+    f2_h: "Fast matching",
+    f2_p: "Match a shipment to the nearest suitable trip to reduce wait time.",
+    f3_h: "Extra income from your trips",
+    f3_p: "Turn regular journeys into simple, safe earnings.",
+    f4_h: "Clear trips dashboard",
+    f4_p: "Organized view of active trips and available shipments.",
+    f5_h: "Smart bundling (3+)",
+    f5_p: "Encourage grouping shipments to lower costs and boost efficiency.",
+    f6_h: "Multi-shipment in one flow",
+    f6_p: "Manage multiple orders in one go.",
     form_h2: "Join the waitlist",
-    form_p: "Fill the form below to get launch updates.",
-    privacy_note: "We respect your privacy — no data sale. Used only for launch updates.",
+    form_p: "Click the button to open a fullscreen form. Mobile-friendly, no layout overlap.",
+    form_btn: "Open form",
+    privacy_note: "We respect your privacy — your info is used only to contact you about the launch.",
     contact_h2: "Contact & Partnerships",
-    contact_p: "Investors/partners: request a short brief under NDA. More details soon.",
-    contact_cta: "Join the list",
+    contact_p: "Investors and partners — we’re excited to explore collaboration that creates shared value.",
+    contact_invest: "Investors",
+    contact_partners: "Partnerships",
+    contact_hello: "General inquiries",
     foot_copy: "© 2025 Faltah — All rights reserved.",
-    foot_priv: "Privacy (short)",
-    foot_terms: "Terms (short)"
+    foot_priv: "Privacy Policy",
+    foot_terms: "Terms",
+    modal_title: "Join the waitlist"
   }
 };
 
@@ -109,21 +126,30 @@ function setLang(lang){
   document.getElementById("enBtn").setAttribute("aria-pressed", !isAr ? "true" : "false");
   localStorage.setItem("faltah_lang", lang);
 }
-
 document.getElementById("arBtn").addEventListener("click", ()=>setLang("ar"));
 document.getElementById("enBtn").addEventListener("click", ()=>setLang("en"));
+setLang(localStorage.getItem("faltah_lang") === "en" ? "en" : "ar");
 
-const saved = localStorage.getItem("faltah_lang");
-setLang(saved === "en" ? "en" : "ar");
+// Modal
+const modal = document.getElementById("formModal");
+const openers = document.querySelectorAll(".open-form");
+const closeBtn = modal.querySelector(".close-btn");
+const backdrop = modal.querySelector(".modal-backdrop");
+function openModal(){ modal.classList.remove("hidden"); modal.setAttribute("aria-hidden","false"); document.body.style.overflow="hidden"; }
+function closeModal(){ modal.classList.add("hidden"); modal.setAttribute("aria-hidden","true"); document.body.style.overflow=""; }
+openers.forEach(btn=>btn.addEventListener("click",e=>{ e.preventDefault(); openModal(); }));
+closeBtn.addEventListener("click", closeModal);
+backdrop.addEventListener("click", closeModal);
 
-// Smooth scroll (no external libs)
+// Open modal if URL hash is #form
+if(location.hash === "#form") openModal();
+
+// Smooth scroll for other anchors
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener("click", e=>{
     const id = a.getAttribute("href").slice(1);
+    if(id === "form") return; // modal handles
     const target = document.getElementById(id);
-    if(target){
-      e.preventDefault();
-      target.scrollIntoView({behavior:"smooth", block:"start"});
-    }
+    if(target){ e.preventDefault(); target.scrollIntoView({behavior:"smooth", block:"start"}); }
   });
 });
