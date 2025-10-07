@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
+
   <title>فلته | Faltah — منصة تربط المرسل بالمسافر</title>
   <meta name="description" content="فلته تربط المرسِل بالمسافر مباشرة لتوصيل الطلبات بسرعة وبتكلفة أقل على الرحلات التي ستتم على أي حال مع تحقيق دخل للمواطن." />
   <meta property="og:title" content="فلته | Faltah — منصة تربط المرسل بالمسافر" />
@@ -11,11 +12,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-fallback.png" />
   <meta name="theme-color" content="#0A84FF" />
-  <!-- Favicons -->
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="any" href="assets/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Favicons (من الحزمة الأخيرة) -->
+  <link rel="icon" href="assets/favicon.ico?v=4">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=4">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=4">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=4">
+
   <link rel="preconnect" href="https://tally.so" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -23,7 +26,8 @@
   <header class="nav glass">
     <div class="container nav-inner">
       <div class="brand">
-        <img src="assets/logo.png" alt="Faltah logo" class="logo" />
+        <!-- بدّل اسم الملف هنا لو شعارك اسمه مختلف (مثلاً logo_v2.png) -->
+        <img src="assets/logo.png?v=4" alt="Faltah logo" class="logo" />
         <span class="brand-name" data-i18n="brand">فلته</span>
       </div>
       <nav class="nav-links">
@@ -40,6 +44,7 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy glass">
@@ -69,6 +74,7 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section container">
       <h2 data-i18n="about_h2">عن فلته (Faltah)</h2>
       <p data-i18n="about_p">
@@ -96,10 +102,11 @@
       </div>
     </section>
 
+    <!-- FEATURES -->
     <section id="features" class="section container">
       <h2 data-i18n="features_h2">المزايا الأساسية</h2>
       <div class="features-columns">
-        <!-- عمود المرسل -->
+        <!-- المرسل -->
         <div class="feature-col">
           <div class="feature glass">
             <span class="tag" data-i18n="tag_sender">للـمرسِل</span>
@@ -112,8 +119,7 @@
             <p class="muted" data-i18n="f2_p">ربط الشحنة بأقرب رحلة مناسبة لتقليل زمن الانتظار.</p>
           </div>
         </div>
-
-        <!-- عمود المسافر -->
+        <!-- المسافر -->
         <div class="feature-col">
           <div class="feature glass">
             <span class="tag" data-i18n="tag_traveler">للمسافر</span>
@@ -126,8 +132,7 @@
             <p class="muted" data-i18n="f4_p">واجهة منظمة لعرض الرحلات القائمة والشحنات المتاحة.</p>
           </div>
         </div>
-
-        <!-- عمود المتاجر -->
+        <!-- المتاجر -->
         <div class="feature-col">
           <div class="feature glass">
             <span class="tag" data-i18n="tag_merchant">للمتاجر</span>
@@ -143,6 +148,7 @@
       </div>
     </section>
 
+    <!-- FORM -->
     <section id="form" class="section container">
       <h2 data-i18n="form_h2">سجّل اهتمامك</h2>
       <p class="muted" data-i18n="form_p">اضغط الزر لفتح النموذج بملء الشاشة.</p>
@@ -152,6 +158,7 @@
       </small>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section container">
       <h2 data-i18n="contact_h2">للتواصل والشراكات</h2>
       <p class="muted" data-i18n="contact_p">
